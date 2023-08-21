@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #00050d;
+    color: #fff;
+    min-height: 5000px;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #00050d;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 30px;
+    color: rgb(0, 149, 255);
+}
+
+header .menu, header .circle{
+    display: none;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+header .navbar ul li a:hover{
+    color: rgb(0, 149, 255);
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #00050d;
+    display: none;    
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 0.1px solid rgba(49, 49, 49, 0.5);
+}
+
+header .navbar ul li:focus-within > ul, header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+/* hero section */
+
+.hero{
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 5, 13, 1) 5%, rgba(255, 255, 255, 0) 85%), url(img/main/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 5, 13, 1) 5%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    padding: 0 10%;
+}
+
+.hero .content h1{
+    font-size: 72px;
+}
+
+.hero .content p{
+    font-size: 18px;
+}
+
+.hero .content ul{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.hero .content .rating li{
+    padding: 0 20px 0 0;
+    margin-bottom: -10px;
+    font-size: 14px;
+}
+
+.hero .content ul li{
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.hero .content ul li a{
+    color: #fff;
+}
+
+.hero .content ul li a:hover{
+    color: rgb(0, 149, 255);
+}
+
+/* Season Section */
+.season {
+    padding: 96px 15% 24px;
+}
+
+.season h2,
+.explore h2,
+.about h2{
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 42px;
+}
+
+.season .column{
+    display: flex;
+    flex-direction: column;
+}
+
+.season .row{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 7, 18);
+}
+
+.season .row .season-img1{
+    flex: 1 1 570px;
+}
+
+.season .row .content{
+    flex: 1 1 570px;
+    padding: 20px;
+}
+
+.season .row .content h3{
+    font-size: 22px;
+}
+
+.season .row .content p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.season .row .season-img1 img{
+    width: 100%;
+}
+
+/* explore section */
+.explore{
+    padding: 100px 12% 0;
+}
+
+.explore .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.explore .row .theboys,
+.explore .row .theseven{
+    border: 3px solid white;
+    padding: 10px;
+    margin: 0 15px 30px;
+}
+
+.explore .row .theboys img,
+.explore .row .theseven img{
+    width: 300px;
+}
+
+.explore .row .theboys h3,
+.explore .row .theseven h3{
+    margin: 5px 0 5px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.explore .row .theboys p,
+.explore .row .theseven p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.explore #second{
+    padding-top: 100px;
+}
+
+/* about section */
+
+.about{
+    padding: 96px 15% 0;
+    height: 100vh;
+}
+
+.about .content{
+    text-align: center;
+}
+
+.about .content p{
+    font-size: 16px;
+}
+
+.about .content p a{
+    color:rgb(0, 149, 255);
+}
+
+.about .content p a:hover{
+    color:rgb(116, 197, 255);
+}
+
+.about .content .row{
+    display: flex;
+    justify-content: center;
+}
+
+.about .content .row img{
+    margin: 20px;
+    width: 200px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 16px 0;
+    margin-top: -4%;
+    background-color: #00050d;
+    position: relative;
+    z-index: 99;
+}
+
+footer .credit p{
+    font-size: 16px;
+}
+
+/* Responsive */
+
+/* Laptop */
+@media (max-width: 1366px){
+    header .logo {
+        font-size: 28px
+    }
+    
+    .hero .content h1{
+        font-size: 50px;
+    }
+    
+    .season h2,
+    .explore h2,
+    .about h2{
+        font-size: 40px;
+    }
+
+    .season .row .content h3,
+    .explore .row .theboys h3,
+    .explore .row .theseven h3{
+        font-size: 18px;
+    }
+    
+    .season .row .content p,
+    .explore .row .theboys p,
+    .explore .row .theseven p,
+    .about .content .p,
+    footer .credit p{
+        font-size: 12px;
+    }
+
+    header .navbar ul li a, .hero .content ul, .hero .content p,  .hero .content .rating li, .hero .content ul li {
+        font-size: 85%;
+    }
+
+    .explore .row .theboys img,
+    .explore .row .theseven img{
+    width: 230px;
+    }
+
+    .about .content .row img{
+        width: 150px;
+    }
+
+}
+
+/* Tablet */
+@media(max-width: 768px){
+
+    header .logo {
+        font-size: 26px
+    }
+    
+    .hero .content h1{
+        font-size: 42px;
+    }
+    
+    .season .row.change .content{
+        order: 1;
+    }
+
+    .explore{
+        padding: 100px 5% 0;;
+    }
+
+    .season h2,
+    .explore h2{
+        font-size: 30px;
+    }
+
+    .season .row .content h3{
+        font-size: 14px;
+    }
+    
+    .season .row .content p,
+    footer .credit p{
+        font-size: 12px;
+    }
+    
+    header .navbar ul li a, .hero .content ul, .hero .content p,  .hero .content .rating li, .hero .content ul li{
+        font-size: 82%;
+    }
+
+    header {
+        padding: 15px 25px;
+        justify-content: space-between;
+    }
+
+    header .circle{
+        display: initial;
+        color: #00050d;
+    }
+
+    header .menu{
+        display: initial;
+        color: #fff
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: -1000%;
+        height: 100vh;
+        width: 80%;
+        background:#00050d;
+        display: absolute;
+        transition: 0.4s;
+    }
+
+    header .navbar.active{
+        left: 0;
+    }
+
+    header .navbar ul li{
+        padding: 0 5px;
+        border-top: 0.1px solid rgba(49, 49, 49, 0.5);
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        padding: 0px;
+    }
+
+    .season .row{
+        flex-wrap: wrap;
+    }
+
+    .about .content .row img{
+        width: 120px;
+    }
+}
+
+/* Phone */
+@media(max-width: 480px){
+
+    header .logo {
+        font-size: 24px
+    }
+    
+    .hero .content h1{
+        font-size: 32px;
+    }
+
+    .hero .content p{
+        font-size: 10px;
+    }
+    
+    .season h2{
+        font-size: 18px;
+    }
+
+    .season .row .content h3{
+        font-size: 10px;
+    }
+    
+    .season .row .content p,
+    footer .credit p{
+        font-size: 8px;
+    }
+
+    header .navbar ul li a, .hero .content ul,  .hero .content .rating li, .hero .content ul li{
+        font-size: 70%;
+    }
+
+    header .navbar{
+        width: 100vh;
+    }
+
+    .about .content .row img{
+        width: 100px;
+    }
+
+}
