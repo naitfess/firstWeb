@@ -336,7 +336,8 @@ footer .credit p{
     }
 
     .season h2,
-    .explore h2{
+    .explore h2,
+    .about h2{
         font-size: 30px;
     }
 
@@ -345,7 +346,8 @@ footer .credit p{
     }
     
     .season .row .content p,
-    footer .credit p{
+    footer .credit p,
+    .about .content p{
         font-size: 12px;
     }
     
@@ -403,6 +405,7 @@ footer .credit p{
 
     .about .content .row img{
         width: 120px;
+        margin: 15px;
     }
 }
 
@@ -421,7 +424,8 @@ footer .credit p{
         font-size: 10px;
     }
     
-    .season h2{
+    .season h2
+    .about h2{
         font-size: 18px;
     }
 
@@ -430,8 +434,9 @@ footer .credit p{
     }
     
     .season .row .content p,
-    footer .credit p{
-        font-size: 8px;
+    footer .credit p,
+    .about .content p{
+        font-size: 10px;
     }
 
     header .navbar ul li a, .hero .content ul,  .hero .content .rating li, .hero .content ul li{
@@ -444,6 +449,7 @@ footer .credit p{
 
     .about .content .row img{
         width: 100px;
+        margin: 10px;
     }
 
 }
